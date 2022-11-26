@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html {
+    box-sizing: border-box; 
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(83,204,196,1) 23%, rgba(84,246,235,1) 100%, rgba(0,212,255,1) 100%); 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+
+.calculator {
+    width: 300px;
+    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* display */
+.calculator-display {
+    font-family: 'Press Start 2P', cursive;    
+    background: rgba(0, 0, 0, 0.7); 
+    color: white; 
+    margin: 0; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end; 
+    border-radius: 3.5px 3.5px 0 0; 
+    max-width: 100%; 
+}
+
+.calculator-display h1 {
+    margin: 0; 
+    padding: 25px; 
+    font-size: 45px; 
+    font-weight: 100; 
+    overflow-x: auto;
+} 
+
+/* buttons */
+.buttons {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+    font-family: 'Sora', sans-serif;
+    padding: 15px; 
+    border: 1px solid white; 
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+button:hover {
+    font-weight: bold; 
+    background-color: lightskyblue;
+    color: white; 
+}
+
+.equals {
+    grid-column: span 2; 
+
+}
+
+.equals:hover {
+    background-color: orange; 
+    color: white; 
+}
+
+.all-clear-button {
+    grid-column: span 2; 
+}
+
+.all-clear-button:hover {
+    background-color: red; 
+    color: white; 
+}
+
+.delete-button:hover {
+    background-color: lightgray; 
+    color: white;
+}
