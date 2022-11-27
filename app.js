@@ -26,7 +26,8 @@ function applyDecimal() {
     }
 }
 
-function deleteFirstDigit() {
+// Delete function, deletes last digit input
+function deleteLastDigit() {
     if(calculatorDisplay.textContent.length === 1) {
         calculatorDisplay.textContent = 0;
     } else if(calculatorDisplay.textContent.length > 1) {
@@ -75,7 +76,7 @@ inputButtons.forEach((inputButton) => {
     } else if (inputButton.classList.contains("decimal")) {
         inputButton.addEventListener('click', () => applyDecimal());
     } else if (inputButton.classList.contains("delete-button")) {
-        inputButton.addEventListener('click', () => deleteFirstDigit());
+        inputButton.addEventListener('click', () => deleteLastDigit());
     }
 });
 
